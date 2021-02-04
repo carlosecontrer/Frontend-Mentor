@@ -1,0 +1,70 @@
+/******CARD******/
+.card {
+  width: 325px;
+  height: 375px;
+  background-color: var(--whiteSmoke);
+  border-radius: 1rem;
+  overflow: hidden;
+  &__header {
+    background-image: url(../images/bg-pattern-card.svg);
+    height: 140px;
+    position: relative;
+  }
+  &__image {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    border-radius: 50%;
+    border: 5px solid var(--whiteSmoke);
+    background-color: var(--whiteSmoke);
+  }
+  &__body {
+    //background-color: red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    height: 140px;
+    border-bottom: thin solid var(--darkGray);
+  }
+ 
+  &__text {
+    margin: 0;
+    //line-height: 1;
+    margin-top: 80px;
+    //background-color: yellow;
+    &:last-child {
+      margin-top: 10px;
+    }
+    &--title {
+      font-weight: 700; //var(--fw);
+      color: var(--veryDarkDesaturatedBlue);
+      font-size: large;
+      &--light {
+        font-weight: var(--ft);
+        color: var(--darkGray);
+      }
+    }
+    &--subtitle {
+      font-size: small;
+      font-weight: var(--ft);
+      color: var(--darkGray);
+    }
+  }
+  &__footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    &--subtitle {
+      font-size: x-small;
+      font-weight: var(--ft);
+      color: var(--darkGray);
+    }
+  }
+  &__stats {
+    text-align: center;
+    line-height:.2rem;
+    margin-top: 1.5rem;
+  }
+}
